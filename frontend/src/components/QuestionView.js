@@ -5,7 +5,16 @@ import Search from './Search';
 import $ from 'jquery';
 
 class QuestionView extends Component {
-  
+  constructor() {
+    super();
+    this.state = {
+      questions: [],
+      page: 1,
+      totalQuestions: 0,
+      categories: {},
+      currentCategory: null,
+    };
+  }
 
   componentDidMount() {
     this.getQuestions();
